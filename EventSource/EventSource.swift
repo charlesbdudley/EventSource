@@ -202,7 +202,7 @@ internal extension EventSource {
         }
 
         additionalHeaders["Accept"] = headers["Accept"] ?? "text/event-stream"
-        additionalHeaders["Cache-Control"] = "no-cache"
+        additionalHeaders["Cache-Control"] = headers["Cache-Control"] ?? "no-cache"
 
         let sessionConfiguration = URLSessionConfiguration.default
         sessionConfiguration.timeoutIntervalForRequest = TimeInterval(INT_MAX)
